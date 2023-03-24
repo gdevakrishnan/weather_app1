@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --main1: #1B4965;
+    --main2: #5FA8D3;
+    --sub1: #62B6CB;
+    --sub2: #BEE9E8;
+    --bg: #CAE9FF;
+    --footer: #023047;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height:100vh;
+    background-color: var(--sub2);
+    overflow-x: hidden;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: var(--main1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 0px 20px;
+}
+
+nav h2 , nav h3 a {
+    color: var(--sub2);
+}
+
+nav h2 span {
+    color: var(--main2);
+}
+
+.main_section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_section .container {
+    width: 40%;
+    height: auto;
+    background-color: var(--main1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 40px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* DATE & TIME */
+.main_section .container .dateContainer {
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_section .container .dateContainer h6 {
+    color: var(--bg);
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+/* WEATHER */
+.main_section .container .get_city {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--main2);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.main_section .container .get_city input {
+    padding: 4px 6px;
+    letter-spacing: 0.6px;
+    outline: none;
+    border: none;
+    background-color: var(--bg);
+    text-decoration: none;
+}
+
+.main_section .container .get_city .controls {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main_section .container .get_city .controls button {
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+    background-color: var(--sub1);
+    color: var(--bg);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* Style both result and history container */
+.main_section .container .result_container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main2);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.main_section .container .result_container .result {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px
+}
+
+.main_section .container .result_container .result .result_data {
+    color: var(--sub2);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.main_section .container .result_container .result .result_data span {
+    color: var(--main1);
+}
+
+.main_section .container .result_container .result .none_data {
+    color: var(--main1);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* History */
+.main_section .history_container {
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    margin: 20px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: none;
+}
+
+.main_section .history_container .ahistory {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: var(--sub1);
+    margin-bottom: 18px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.main_section .history_container .ahistory .history_group .city {
+    color: var(--main1);
+}
+
+.main_section .history_container .ahistory .history_group .desc {
+    color: var(--bg);
+}
+
+.main_section .history_container .ahistory .ahistory_close {
+    width: 20px;
+    height: 20px;
+    background-color: var(--sub2);
+    color: var(--main1);
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+/* History Controls */
+.main_section .history_controls {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.main_section .history_controls button {
+    border: none;
+    outline: none;
+    background-color: var(--main1);
+    color: var(--bg);
+    font-size: 17px;
+    letter-spacing: 0.6px;
+    border-radius: 5px;
+    padding: 8px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--footer);
+}
+
+.footer p {
+    color: var(--bg);
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    button, a{
+        cursor: default;
+    }
+
+    .main_section .container {
+        width: 98%;
+        border-radius: 10px;
+    }
+
+    .main_section .history_container {
+        width: 98%;
+    }
+
+    .main_section .history_controls {
+        width: 90%;
+        justify-content: space-evenly;
+        padding: 0px 20px;
+    }
+}

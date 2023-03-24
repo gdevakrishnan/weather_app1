@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather ~ Sigma | Metazord</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <h2 class="logo"><span>Sigma</span> ~ weather</h2>
+      <h3 class="history" title="history"><a href="#history"><i class="fa fa-history"></i></a></h3>
+    </nav>
+
+    <section class="main_section">
+      <!-- ######### Date and Time  ########-->
+      <div class="container">
+        <div class="dateContainer">
+          <h6 class="date"></h6>
+          <h6 class="time"></h6>
+        </div>
+
+        <!-- ######### Get City  ########## -->
+        <div class="get_city">
+          <input type="text" id="city_input" placeholder="city name" />
+          <div class="controls">
+            <button class="submit" title="clear">GET</button>
+            <button class="clear" title="get">CLEAR</button>
+          </div>
+        </div>
+
+        <!-- #########   result ######### -->
+        <div class="result_container">
+          <div class="result">
+            <h3 class="result_data city"></h3>
+            <h3 class="result_data temp"></h3>
+            <h3 class="result_data main"></h3>
+            <h3 class="result_data desc"></h3>
+            <h3 class="result_data wind"></h3>
+            <h3 class="result_data country"></h3>
+            <h3 class="none_data">please enter the city name</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- ####  History ~ local storage ##### -->
+      <div class="history_controls">
+        <button class="history_refresh" value="refresh"><i class="fa fa-history"></i></button>
+        <button class="history_clear" value="refresh"><i class="fa fa-trash"></i></button>
+      </div>
+      <div class="history_container">
+      </div>
+    </section>
+    <footer class="footer">
+      <p>developed by Sigma @ 2023 | Thanks to House Of Metazord</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
