@@ -29,11 +29,10 @@ dateFunction();
 // WEATHER
 
 // Weather Response
-// API_key = "b91dc74b3c6a2f219744638c280e0146";
 
 //  https://api.openweathermap.org/data/2.5/weather?q={city}&appid=${API_key}&units=metric
 
-let API_key = "b91dc74b3c6a2f219744638c280e0146";
+let API_key = "(YOUR API KEY)";
 
 async function weather_response(city) {
   let weather_data = await fetch(
